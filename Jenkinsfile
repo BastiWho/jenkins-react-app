@@ -12,7 +12,7 @@ node {
     sh 'docker exec node npm install -g npm@10.2.4'
     sh 'docker exec node npm run build'
     sh 'docker build -t jenkins-react-app .'
-    sh 'docker ps --filter name=jenkins-react-app'
+    sh 'docker ps'
     sh 'docker kill node'
   }
   stage('Cleanup') {
