@@ -9,6 +9,7 @@ node {
     sh 'docker exec node npm --version'
     sh 'docker exec node ls -la'
     sh 'docker exec node npm ci'
+    sh 'docker exec npm install -g npm@10.2.4'
     sh 'docker exec npm run build'
     sh 'docker exec node npm run build'
     sh 'docker kill node'
